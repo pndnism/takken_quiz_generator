@@ -1,0 +1,30 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+uvicorn = "*"
+sqlalchemy = "*"
+psycopg2-binary = "*"
+pandas = "*"
+openai = "*"
+kanjize = "*"
+pydantic = "*"
+alembic = "*"
+bcrypt = "*"
+pyjwt = "*"
+pydantic-settings = "*"
+python-multipart = "*"
+python-dotenv = "*"
+psycopg2 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+dev = "uvicorn api.index:app --reload --port 8000 --timeout-keep-alive 300"
+
