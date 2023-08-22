@@ -18,7 +18,6 @@ pyjwt = "*"
 pydantic-settings = "*"
 python-multipart = "*"
 python-dotenv = "*"
-psycopg2 = "*"
 
 [dev-packages]
 
