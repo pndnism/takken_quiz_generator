@@ -305,7 +305,7 @@ async def login_for_access_token(response: Response, user_login: UserLogin, db: 
         value=f"Bearer {access_token}",
         # httponly=True,  # JavaScriptからのアクセスを防ぐ
         max_age=3600,   # 例: 30分間の有効期限
-        # samesite="None",  # CSRF対策
+        samesite="None",  # CSRF対策
         # domain="localhost",  # デプロイ時にはドメインを変更する
     )
     return {"access_token": access_token, "token_type": "bearer"}
