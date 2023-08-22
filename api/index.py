@@ -27,7 +27,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://takken-quiz-generator-z22o-*-pndnism.vercel.app/generator"],
+    allow_origins=["http://localhost:3000", "https://takken-quiz-generator-z22o.vercel.app", "https://takken-quiz-generator-z22o*.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -303,7 +303,7 @@ async def login_for_access_token(response: Response, user_login: UserLogin, db: 
     response.set_cookie(
         key="access_token",
         value=f"Bearer {access_token}",
-        # httponly=True,  # JavaScriptからのアクセスを防ぐ
+        httponly=True,  # JavaScriptからのアクセスを防ぐ
         max_age=3600,   # 例: 30分間の有効期限
         samesite="None",  # CSRF対策
         # domain="localhost",  # デプロイ時にはドメインを変更する
