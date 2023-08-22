@@ -27,7 +27,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://takken-quiz-generator.vercel.app"],
+    allow_origins=["http://localhost:3000", "https://takken-quiz-generator-z22o-qgia9a1sc-pndnism.vercel.app/generator"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
